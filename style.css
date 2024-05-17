@@ -17,15 +17,14 @@ body {
   flex-direction: column;
   gap: 0.4rem;
 }
-
 #input__num {
   border: none;
   background: none;
   color: #fff;
-  font-size: 36px;
-  width: 210px;
+  font-size: 64px;
+  max-width: 360px;
+  padding: 0 1rem;
   text-align: right;
-  caret-color: transparent;
 }
 
 #input__num:active,
@@ -35,32 +34,35 @@ body {
   background: none;
 }
 
-.board__num {
-  display: flex;
-  gap: 0.4rem;
-  font-size: 24px;
+#input__num::placeholder {
+  color: #fff;
 }
 
-.board__btn__light {
+.board__num {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 0.4rem;
+}
+
+.board__btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: lightgray;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.board__btn__light {
+  background-color: #a5a5a5;
   text-decoration: none;
   color: black;
 }
 
 .board__btn__orange {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: orange;
+  background-color: #ff9f0a;
   text-decoration: none;
   color: #fff;
 }
@@ -72,24 +74,21 @@ body {
 }
 
 .board__btn__grey {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: grey;
+  background-color: #343434;
   text-decoration: none;
   color: #fff;
 }
 .board__btn__grey__big {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding: 1.7rem;
   align-items: center;
-  width: 108px;
-  height: 50px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 157px;
+  border-radius: 40%;
   border-radius: 50px;
-  background-color: grey;
+  background-color: #343434;
   text-decoration: none;
   color: #fff;
 }

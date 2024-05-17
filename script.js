@@ -20,7 +20,7 @@ const sum = document.getElementById("sum");
 
 let result = [];
 let secondResult = [];
-let tempNum;
+let tempNum = 0;
 let operations;
 let temp;
 let resultSum;
